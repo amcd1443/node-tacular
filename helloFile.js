@@ -23,6 +23,7 @@ fileSystem.readFile("countries.txt", "utf8", function(err, data) {
 		console.log(" country error is ", err);
 	} else {
 		processCountryFile(data);
+		console.log("reading of file countries.txt was successful");
 	}
 });
 
@@ -44,3 +45,32 @@ fileSystem.writeFile("output.txt", "hey jerk", function(err) {
 
 
 // homework assignment: make 1 file for each country; either named of the country or country name in it
+
+//readFile then processCountryFile(add a counter for the array) then writeFile
+
+
+fileSystem.readFile("countries.txt", "utf8", function(err, data){
+	function processCountryFile(countryData) {
+				var countryArray = countryData.split("\n\n");
+				console.log(" the first cont in the list ", countryArray[0]);
+			};
+		if (err) {
+			console.log( "reading file countries.txt created the error of " , err);
+		} else if (true) {
+			processCountryFile(data);
+			console.log("keep going austin");
+// maybe dont use the function and just do the split one line up?
+
+			}
+			else {
+			
+			};
+})
+
+
+
+
+
+
+
+
