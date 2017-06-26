@@ -28,12 +28,12 @@ function processCountryFile(countryData) {
 	var countryArray = countryData.split("\n\n");
 	console.log(" the 2nd and 5th countries are ", countryArray[0], " and ", countryArray[4]);
 	for (var i = 0; i <= countryArray.length; i = i + 1) {
-	fileSystem.writeFile(countryArray[i]+".txt", countryArray[i], function(err) {
-	if (err) {
-	console.log(" this is an error bc of ", err);
-		}; 
-});
-}
+		fileSystem.writeFile(countryArray[i]+".txt", countryArray[i], function(err) {
+			if (err) {
+				console.log(" this is an error bc of ", err);
+			}; 
+		});
+	}
 };
 /////////////////////////////////
 fileSystem.writeFile("output.txt", "hey jerk", function(err) {
@@ -44,13 +44,8 @@ fileSystem.writeFile("output.txt", "hey jerk", function(err) {
 		};
 
 });
-/////////////////////////////////////////////
-
-
-
 // homework assignment: make 1 file for each country; either named after the country or country name in it
 
-//readFile then processCountryFile(add a counter for the array) then writeFile
 
 
 
