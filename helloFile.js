@@ -28,7 +28,7 @@ function processCountryFile(countryData) {
 	var countryArray = countryData.split("\n\n");
 	console.log(" the 2nd and 5th countries are ", countryArray[0], " and ", countryArray[4]);
 	for (var i = 0; i <= countryArray.length; i = i + 1) {
-		fileSystem.writeFile(countryArray[i]+".txt", countryArray[i], function(err) {
+		fileSystem.writeFile(countryArray[i] + ".txt", countryArray[i], function(err) {
 			if (err) {
 				console.log(" this is an error bc of ", err);
 			}; 
