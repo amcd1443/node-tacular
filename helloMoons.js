@@ -37,8 +37,6 @@ request('https://raw.githubusercontent.com/dariusk/corpora/master/data/science/p
 			});
 
 		};
-		
-
 	} else {
 		console.log(" body NOT found");
 	} 

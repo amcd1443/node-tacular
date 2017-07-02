@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/amcd1443/node-tacular#readme",
   "dependencies": {
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "riot-games-api-nodejs": "^1.0.6"
   }
 }
