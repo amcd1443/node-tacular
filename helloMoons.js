@@ -21,7 +21,12 @@ request('https://raw.githubusercontent.com/dariusk/corpora/master/data/science/p
 			var planet = listOfPlanets[i];
 			var filePath = "moons/"
 			var fileName = planet.name;
-			var fileData = planet.moons;
+			var fileData = null;
+			if (planet.moons.length == 0) {
+				fileData = "there are no moons";
+			} else {
+				fileData = planet.moons;
+			}
 			fileSystem.writeFile(filePath + fileName, fileData, function (error) {
 				if (error) {
 					console.log(" error is ", error);
