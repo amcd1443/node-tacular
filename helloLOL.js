@@ -31,4 +31,21 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 		//var listOfGames = data.games;
 
 
-
+riot.champion.id(
+    '21',
+    {},
+    function(err, data) {
+        if (err instanceof Error) {
+            console.log("Error 1: " + err);
+            return 0;
+        }
+        else {
+            var rankedEnabled = data.rankedPlayEnabled;
+            if (rankedEnabled == true){
+                console.log('Champion 21 (Miss Fortune) can be played in ranked');
+            } else {
+                console.log('Champion 21 (Miss Fortune) can not be played in ranked');
+            }
+        }
+    }
+)
