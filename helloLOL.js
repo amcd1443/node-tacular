@@ -12,7 +12,17 @@ var fileSytem = require('fs');
 //summonerID: 20521097 (from: https://developer.riotgames.com/my-account/)
 
 var riot = require('riot-games-api-nodejs');
-riot.developerKey = ('RGAPI-e6494e54-7201-4a69-a396-1a7486220041');
+riot.developerKey = ('RGAPI-95b4dee4-2d1f-4597-a9ca-1d23627fc8df');
+
+var pathParam = {
+	championID: '21',
+	freeToPlay: "true",
+	summonerID: '20521097',
+	summonerName: "grymShardda",
+	teamID: null,
+	teamIDs: null,
+
+}
 
 riot.settings = {
 	region: "na"
@@ -27,10 +37,14 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 });
 
 
+
+
+
 //homework: use the api to pull your last 10 games and write a file for each one
 		//var listOfGames = data.games;
 
 
+<<<<<<< HEAD
 riot.champion.id(
     '21',
     {},
@@ -49,3 +63,24 @@ riot.champion.id(
         }
     }
 )
+=======
+// // logs all the champions that are free to play
+// riot.champion.all(
+// {
+// 	'freeToPlay': 'true'
+// },
+// console.log
+// );
+
+
+// logs list of the champion's id, key, name, and title
+// riot.staticData.champions(
+
+// 		console.log
+// 	);
+
+riot.matchHistory.matchHistory(
+	"20521097", {},
+	console.log
+	);
+>>>>>>> origin
