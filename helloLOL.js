@@ -72,6 +72,12 @@ riot.staticData.item(
 );
 
 
+riot.game.bySummoner("20521097", {}, function (error, data) {
+	// console.log("the games were", data.games);
+	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+});
+
+
 
 
 
