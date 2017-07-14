@@ -45,16 +45,3 @@ fileSystem.writeFile("output.txt", "hey jerk", function(err) {
 
 });
 // homework assignment: make 1 file for each country; either named after the country or country name in it
-
-
-
-
-
-
-
-
-
-
-
-
-
