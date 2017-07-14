@@ -12,7 +12,7 @@ var fileSytem = require('fs');
 //summonerID: 20521097 (from: https://developer.riotgames.com/my-account/)
 
 var riot = require('riot-games-api-nodejs');
-riot.developerKey = ('RGAPI-95b4dee4-2d1f-4597-a9ca-1d23627fc8df');
+riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
 
 var pathParam = {
 	championID: '21',
@@ -44,27 +44,8 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 		//var listOfGames = data.games;
 
 
-<<<<<<< HEAD
-riot.champion.id(
-    '21',
-    {},
-    function(err, data) {
-        if (err instanceof Error) {
-            console.log("Error 1: " + err);
-            return 0;
-        }
-        else {
-            var rankedEnabled = data.rankedPlayEnabled;
-            if (rankedEnabled == true){
-                console.log('Champion 21 (Miss Fortune) can be played in ranked');
-            } else {
-                console.log('Champion 21 (Miss Fortune) can not be played in ranked');
-            }
-        }
-    }
-)
-=======
-// // logs all the champions that are free to play
+
+// logs all the champions that are free to play
 // riot.champion.all(
 // {
 // 	'freeToPlay': 'true'
@@ -73,14 +54,27 @@ riot.champion.id(
 // );
 
 
-// logs list of the champion's id, key, name, and title
-// riot.staticData.champions(
+// users.sort(function(a, b){
+//     if(a.firstname < b.firstname) return -1;
+//     if(a.firstname > b.firstname) return 1;
+//     return 0;
+// })
 
-// 		console.log
-// 	);
 
-riot.matchHistory.matchHistory(
-	"20521097", {},
-	console.log
+
+//logs list of the champion's id, key, name, and title
+riot.staticData.champions( 
+				
+		console.log
+
 	);
->>>>>>> origin
+
+
+riot.staticData.item(
+	{	
+		itemData: 'id, description'
+	},
+		console.log
+);
+
+
