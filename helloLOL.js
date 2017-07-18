@@ -12,11 +12,11 @@ var fileSytem = require('fs');
 //summonerID: 20521097 (from: https://developer.riotgames.com/my-account/)
 
 var riot = require('riot-games-api-nodejs');
-<<<<<<< HEAD
-riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
-=======
-riot.developerKey = ('RGAPI-70e4323b-581d-4294-a678-2e619fa33228');
->>>>>>> refs/remotes/origin/master
+
+//riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
+
+riot.developerKey = ('RGAPI-7e375b66-9b05-4d4e-bcca-fe2b42826371');
+
 
 var pathParam = {
 	championID: '21',
@@ -48,7 +48,7 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 		
 
 
-<<<<<<< HEAD
+
 
 // logs all the champions that are free to play
 // riot.champion.all(
@@ -57,13 +57,13 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // },
 // console.log
 // );
-=======
+
 // logs all the champions that are free to play
->>>>>>> refs/remotes/origin/master
 
-freeChampions = [
 
-<<<<<<< HEAD
+
+
+
 // users.sort(function(a, b){
 //     if(a.firstname < b.firstname) return -1;
 //     if(a.firstname > b.firstname) return 1;
@@ -73,53 +73,61 @@ freeChampions = [
 
 
 //logs list of the champion's id, key, name, and title
-riot.staticData.champions( 
+// riot.staticData.champions( 
 				
-		console.log
+// 		console.log
 
-	);
-
-
-riot.staticData.item(
-	{	
-		itemData: 'id, description'
-	},
-		console.log
-);
+// 	)
 
 
-=======
-riot.champion.all(
-{
-	'freeToPlay': 'true'
-},
-console.log
-)
-
-];
-
-if (freeChampions) {
-	console.log(" these are the free to play champions ", freeChampions);
-} else {
-	console.log(" no champs are free")
-};
+// riot.staticData.item(
+// 	{	
+// 		itemData: 'id, description'
+// 	},
+// 		console.log
+// )
 
 
-riot.staticData.item(
-{
-	itemData: 'name'
-},
-	console.log
-);
+
+// riot.champion.all(
+// {
+// 	'freeToPlay': 'true'
+// },
+// console.log
+// )
+
+
+
+// if (freeChampions) {
+// 	console.log(" these are the free to play champions ", freeChampions);
+// } else {
+// 	console.log(" no champs are free")
+// };
+
+
+// riot.staticData.item(
+// {
+// 	itemData: 'name'
+// },
+// 	console.log
+// );
+
+// riot.game.bySummoner("20521097", {}, function (error, data) {
+// 	 //console.log("the games were", data.games);
+// 	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+// });
+
 
 
 riot.game.bySummoner("20521097", {}, function (error, data) {
-	// console.log("the games were", data.games);
-	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+	 //console.log("the games were", data.games);
+	console.log("for game one, champion was: " + data.games[0].stats.numDeath + " and spell2 was:" + data.games[0].spell2);
 });
 
 
 
 
 
->>>>>>> refs/remotes/origin/master
+
+
+
