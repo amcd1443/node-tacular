@@ -136,15 +136,31 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 
 riot.game.bySummoner("20521097", {}, function (error, data) {
 	//console.log("the games were", data.games);
-	var listOfGames = data.games.length;
-	for (i = 0; i < listOfGames; i++) {
-		if 
+	// var listOfGames = data.games.length;
+	// for (i = 0; i < listOfGames; i++) {
+	// 	console.log("champion id is ", listOfGames[i].championId); 
 
-
-	}
-	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+	// }
+	for (i = 0; i < data.games.length; i++) {
+	console.log("for game, champion was: " + data.games[i].championId + " and spell2 was:" + data.games[i].spell2);
 	console.log("data.games.length is ", data.games.length);
+	}
 });
+
+
+
+
+// for (var i = 0; i < countryArray.length; i = i + 1) {
+// 		fileSystem.writeFile("countries/ " + countryArray[i] + ".txt", countryArray[i], function(err) {
+// 			if (err) {
+// 				console.log(" this is an error bc of ", err);
+// 			}; 
+
+
+
+
+
+
 
 
 
