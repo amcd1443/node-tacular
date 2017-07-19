@@ -12,11 +12,11 @@ var fileSytem = require('fs');
 //summonerID: 20521097 (from: https://developer.riotgames.com/my-account/)
 
 var riot = require('riot-games-api-nodejs');
-<<<<<<< HEAD
+
 riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
-=======
+
 riot.developerKey = ('RGAPI-70e4323b-581d-4294-a678-2e619fa33228');
->>>>>>> refs/remotes/origin/master
+
 
 var pathParam = {
 	championID: '21',
@@ -48,7 +48,7 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 		
 
 
-<<<<<<< HEAD
+
 
 // logs all the champions that are free to play
 // riot.champion.all(
@@ -57,13 +57,13 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // },
 // console.log
 // );
-=======
+
 // logs all the champions that are free to play
->>>>>>> refs/remotes/origin/master
 
-freeChampions = [
 
-<<<<<<< HEAD
+//freeChampions = [
+
+
 // users.sort(function(a, b){
 //     if(a.firstname < b.firstname) return -1;
 //     if(a.firstname > b.firstname) return 1;
@@ -88,21 +88,14 @@ riot.staticData.item(
 );
 
 
-=======
 riot.champion.all(
 {
 	'freeToPlay': 'true'
 },
 console.log
-)
+);
 
-];
 
-if (freeChampions) {
-	console.log(" these are the free to play champions ", freeChampions);
-} else {
-	console.log(" no champs are free")
-};
 
 
 riot.staticData.item(
@@ -121,5 +114,3 @@ riot.game.bySummoner("20521097", {}, function (error, data) {
 
 
 
-
->>>>>>> refs/remotes/origin/master
