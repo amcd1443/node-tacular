@@ -13,9 +13,15 @@ var fileSytem = require('fs');
 
 var riot = require('riot-games-api-nodejs');
 
+<<<<<<< HEAD
 riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
 
 riot.developerKey = ('RGAPI-70e4323b-581d-4294-a678-2e619fa33228');
+=======
+//riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
+
+riot.developerKey = ('RGAPI-7e375b66-9b05-4d4e-bcca-fe2b42826371');
+>>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
 
 
 var pathParam = {
@@ -61,7 +67,11 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // logs all the champions that are free to play
 
 
+<<<<<<< HEAD
 //freeChampions = [
+=======
+
+>>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
 
 
 // users.sort(function(a, b){
@@ -73,21 +83,22 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 
 
 //logs list of the champion's id, key, name, and title
-riot.staticData.champions( 
+// riot.staticData.champions( 
 				
-		console.log
+// 		console.log
 
-	);
-
-
-riot.staticData.item(
-	{	
-		itemData: 'id, description'
-	},
-		console.log
-);
+// 	)
 
 
+// riot.staticData.item(
+// 	{	
+// 		itemData: 'id, description'
+// 	},
+// 		console.log
+// )
+
+
+<<<<<<< HEAD
 riot.champion.all(
 {
 	'freeToPlay': 'true'
@@ -96,21 +107,51 @@ console.log
 );
 
 
+=======
+
+// riot.champion.all(
+// {
+// 	'freeToPlay': 'true'
+// },
+// console.log
+// )
 
 
-riot.staticData.item(
-{
-	itemData: 'name'
-},
-	console.log
-);
+
+// if (freeChampions) {
+// 	console.log(" these are the free to play champions ", freeChampions);
+// } else {
+// 	console.log(" no champs are free")
+// };
+>>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
+
+
+// riot.staticData.item(
+// {
+// 	itemData: 'name'
+// },
+// 	console.log
+// );
+
+// riot.game.bySummoner("20521097", {}, function (error, data) {
+// 	 //console.log("the games were", data.games);
+// 	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+// });
+
 
 
 riot.game.bySummoner("20521097", {}, function (error, data) {
-	// console.log("the games were", data.games);
-	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+	 //console.log("the games were", data.games);
+	console.log("for game one, champion was: " + data.games[0].stats.numDeath + " and spell2 was:" + data.games[0].spell2);
 });
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
