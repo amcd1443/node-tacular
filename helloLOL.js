@@ -66,43 +66,25 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 
 
 
-//logs list of the champion's id, key, name, and title
-// riot.staticData.champions.name( 
-				
-// 		console.log
-
-// 	)
-
-
-// riot.staticData.item(
-// 	{	
-// 		itemData: 'id, description'
+// ////logs list of the champion's id, key, name, and title
+// riot.staticData.champions( 
+// 	{
+// 		'freeToPlay': 'true'
 // 	},
 // 		console.log
-// )
 
-// riot.champion.all(
-// {
-// 	'freeToPlay': 'true'
-// },
-// console.log
-// );
-
-
-// riot.champion.all(
-// {
-// 	'freeToPlay': 'true'
-// },
-// console.log
-// )
+// 	);
 
 
 
-// if (freeChampions) {
-// 	console.log(" these are the free to play champions ", freeChampions);
-// } else {
-// 	console.log(" no champs are free")
-// };
+riot.champion.all(
+{
+	'freeToPlay': 'true'
+	//'botEnabled': 'true'
+},
+console.log
+);
+
 
 
 
@@ -119,56 +101,38 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // });
 
 
+// Completed hw with function below
+// riot.game.bySummoner("20521097", {}, function (error, data) {
+// 	//console.log("the games were", data.games);
+// 	// var listOfGames = data.games.length;
+// 	// for (i = 0; i < listOfGames; i++) {
+// 	// 	console.log("champion id is ", listOfGames[i].championId); 
 
-riot.game.bySummoner("20521097", {}, function (error, data) {
-	//console.log("the games were", data.games);
-	// var listOfGames = data.games.length;
-	// for (i = 0; i < listOfGames; i++) {
-	// 	console.log("champion id is ", listOfGames[i].championId); 
+// 	// }
+// 	for (i = 0; i < data.games.length; i++) {
+// 		var lolFilePath = "LoLgamedata/";
+// 		var lolFileName = data.games[i].championId;
+// 		var lolFileData = data.games[i].createDate;
 
-	// }
-	for (i = 0; i < data.games.length; i++) {
-		var lolFilePath = "LoLgamedata/";
-		var lolFileName = data.games[i].championId;
-		var lolFileData = data.games[i].createDate;
-
-		fileSystem.writeFile(lolFilePath + lolFileName, lolFileData, function(err){
-			if (err) {
-				console.log("LoL's error is ", err);
-			}
+// 		fileSystem.writeFile(lolFilePath + lolFileName, lolFileData, function(err){
+// 			if (err) {
+// 				console.log("LoL's error is ", err);
+// 			}
 		
-		})
-	console.log("for game, champion was: ", data.games[i].championId, " spell1 was ", data.games[i].spell1, " and, spell2 was: ", data.games[i].spell2);
-	}
-	console.log("data.games.length is ", data.games.length);
-});
+// 		})
+// 	console.log("for game, champion was: ", data.games[i].championId, " spell1 was ", data.games[i].spell1, " and, spell2 was: ", data.games[i].spell2);
+// 	}
+// 	console.log("data.games.length is ", data.games.length);
+// });
 
-
-
-	// for (var i = 0; i < listOfPlanets.length; i = i + 1) {
-	// 		var planet = listOfPlanets[i];
-	// 		var filePath = "moons/"
-	// 		var fileName = planet.name;
-	// 		var fileData = null;
-	// 		if (planet.moons.length == 0) {
-	// 			fileData = "there are no moons";
-	// 		} else {
-	// 			fileData = planet.moons;
-	// 		}
-	// 		fileSystem.writeFile(filePath + fileName, fileData, function (error) {
-	// 			if (error) {
-	// 				console.log(" error is ", error);
-	// 			} else {
-	// 				console.log(fileName + " written succesfully");
-	// 				console.log(fileData + " also written successfully");
-	// 			}
-	// 		});
-
-	// 	};
-
-
-
-
-
+////////trying to get the second layer of data
+// riot.game.bySummoner("20521097", {}, function (error, data) {
+// 	//console.log("the games were", data.games);
+// 	for (i = 0; i < data.games.length; i++) {
+	
+// 	console.log("for game, champion was: ", data.games[i].championId, " spell1 was ", data.games[i].spell1, " and, spell2 was: ", data.games[i].spell2);
+// 	}
+// 	console.log("totalHeal is ", data.games[1].stats.totalHeal);
+// });
 
 
