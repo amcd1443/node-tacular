@@ -1,4 +1,8 @@
-var fileSytem = require('fs');
+var fileSystem = require('fs');
+
+
+
+
 
 //https://www.npmjs.com/package/riot-games-api-nodejs
 
@@ -14,13 +18,9 @@ var fileSytem = require('fs');
 var riot = require('riot-games-api-nodejs');
 
 
-riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
+riot.developerKey = ('RGAPI-03528269-dd7c-4eec-856a-4a0b031835e5');
 
-riot.developerKey = ('RGAPI-70e4323b-581d-4294-a678-2e619fa33228');
 
-//riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
-
-riot.developerKey = ('RGAPI-7e375b66-9b05-4d4e-bcca-fe2b42826371');
 
 
 
@@ -64,24 +64,10 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // console.log
 // );
 
-// logs all the champions that are free to play
-
-
-
-//freeChampions = [
-
-
-
-// users.sort(function(a, b){
-//     if(a.firstname < b.firstname) return -1;
-//     if(a.firstname > b.firstname) return 1;
-//     return 0;
-// })
-
 
 
 //logs list of the champion's id, key, name, and title
-// riot.staticData.champions( 
+// riot.staticData.champions.name( 
 				
 // 		console.log
 
@@ -142,21 +128,43 @@ riot.game.bySummoner("20521097", {}, function (error, data) {
 
 	// }
 	for (i = 0; i < data.games.length; i++) {
-	console.log("for game, champion was: " + data.games[i].championId + " and spell2 was:" + data.games[i].spell2);
-	console.log("data.games.length is ", data.games.length);
+		var lolFilePath = "LoLgamedata/";
+		var lolFileName = data.games[i].championId;
+		var lolFileData = data.games[i].createDate;
+
+		fileSystem.writeFile(lolFilePath + lolFileName, lolFileData, function(err){
+			if (err) {
+				console.log("LoL's error is ", err);
+			}
+		
+		})
+	console.log("for game, champion was: ", data.games[i].championId, " spell1 was ", data.games[i].spell1, " and, spell2 was: ", data.games[i].spell2);
 	}
+	console.log("data.games.length is ", data.games.length);
 });
 
 
 
+	// for (var i = 0; i < listOfPlanets.length; i = i + 1) {
+	// 		var planet = listOfPlanets[i];
+	// 		var filePath = "moons/"
+	// 		var fileName = planet.name;
+	// 		var fileData = null;
+	// 		if (planet.moons.length == 0) {
+	// 			fileData = "there are no moons";
+	// 		} else {
+	// 			fileData = planet.moons;
+	// 		}
+	// 		fileSystem.writeFile(filePath + fileName, fileData, function (error) {
+	// 			if (error) {
+	// 				console.log(" error is ", error);
+	// 			} else {
+	// 				console.log(fileName + " written succesfully");
+	// 				console.log(fileData + " also written successfully");
+	// 			}
+	// 		});
 
-// for (var i = 0; i < countryArray.length; i = i + 1) {
-// 		fileSystem.writeFile("countries/ " + countryArray[i] + ".txt", countryArray[i], function(err) {
-// 			if (err) {
-// 				console.log(" this is an error bc of ", err);
-// 			}; 
-
-
+	// 	};
 
 
 
