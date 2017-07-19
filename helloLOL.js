@@ -13,15 +13,15 @@ var fileSytem = require('fs');
 
 var riot = require('riot-games-api-nodejs');
 
-<<<<<<< HEAD
+
 riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
 
 riot.developerKey = ('RGAPI-70e4323b-581d-4294-a678-2e619fa33228');
-=======
+
 //riot.developerKey = ('RGAPI-993f1207-9de0-4ae5-8170-f12eba47e2a9');
 
 riot.developerKey = ('RGAPI-7e375b66-9b05-4d4e-bcca-fe2b42826371');
->>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
+
 
 
 var pathParam = {
@@ -67,11 +67,9 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // logs all the champions that are free to play
 
 
-<<<<<<< HEAD
-//freeChampions = [
-=======
 
->>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
+//freeChampions = [
+
 
 
 // users.sort(function(a, b){
@@ -97,17 +95,13 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 // 		console.log
 // )
 
+// riot.champion.all(
+// {
+// 	'freeToPlay': 'true'
+// },
+// console.log
+// );
 
-<<<<<<< HEAD
-riot.champion.all(
-{
-	'freeToPlay': 'true'
-},
-console.log
-);
-
-
-=======
 
 // riot.champion.all(
 // {
@@ -123,7 +117,7 @@ console.log
 // } else {
 // 	console.log(" no champs are free")
 // };
->>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
+
 
 
 // riot.staticData.item(
@@ -141,17 +135,16 @@ console.log
 
 
 riot.game.bySummoner("20521097", {}, function (error, data) {
-	 //console.log("the games were", data.games);
-	console.log("for game one, champion was: " + data.games[0].stats.numDeath + " and spell2 was:" + data.games[0].spell2);
+	//console.log("the games were", data.games);
+	var listOfGames = data.games.length;
+	for (i = 0; i < listOfGames; i++) {
+		if 
+
+
+	}
+	console.log("for game one, champion was: " + data.games[0].championId + " and spell2 was:" + data.games[0].spell2);
+	console.log("data.games.length is ", data.games.length);
 });
 
 
 
-
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 550f77be964fafe66ba406de70cdd75ac4982f9b
