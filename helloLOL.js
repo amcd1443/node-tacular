@@ -18,7 +18,7 @@ var fileSystem = require('fs');
 var riot = require('riot-games-api-nodejs');
 
 
-riot.developerKey = ('RGAPI-03528269-dd7c-4eec-856a-4a0b031835e5');
+riot.developerKey = ('RGAPI-a7e7ebce-32f6-47cc-ac17-d0f8bfc27b37');
 
 
 
@@ -79,8 +79,9 @@ riot.summoner.byName("grymShardda",{},function (err, data) {
 
 riot.champion.all(
 {
-	'freeToPlay': 'true'
-	//'botEnabled': 'true'
+	'freeToPlay': 'true',
+	'botEnabled': 'true',
+	'botMmEnabled': 'true'
 },
 console.log
 );
